@@ -1,0 +1,16 @@
+<div>
+    <header>
+        <h2>Top Header<span aria-hidden="true"></span></h2>
+    </header>
+    <ul *ngFor="let value of news?.sources" data-component="List" role="list">
+        <li data-component="ListItem"><span class="_216m9 _8F1Ll"></span>
+            <div>
+                <h3>
+                    <a href={{value.url}} data-component="Link">{{value.name}}
+                    </a>
+                </h3>
+                <p>{{value.description}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
