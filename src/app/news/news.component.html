@@ -1,16 +1,35 @@
-<div>
-    <header>
-        <h2>Top Header<span aria-hidden="true"></span></h2>
-    </header>
-    <ul *ngFor="let value of news?.sources" data-component="List" role="list">
-        <li data-component="ListItem"><span class="_216m9 _8F1Ll"></span>
-            <div>
-                <h3>
-                    <a href={{value.url}} data-component="Link">{{value.name}}
-                    </a>
-                </h3>
-                <p>{{value.description}}</p>
+<div class="row g-0">
+    <div class="col-6 col-md-4">
+        <div class="flex">
+            <div class="flex-none w-14 h-14">
             </div>
-        </li>
-    </ul>
+            <div class="flex-initial w-64 ...">
+                <div class="container-sm">
+                    <div class="row pt-4" *ngFor="let value of headears?.sources ">
+                        <div class="card p-2" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{value.name}}</h5>
+                                <p class="card-text">{{value.description}}</p>
+                                <a href="{{value.url}}" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-initial w-32 ...">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="row pt-4" *ngFor="let value of everything?.articles ">
+            <div class="card p-2">
+                <img src="{{value.urlToImage}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{value.title}}</h5>
+                    <p class="card-text">{{value.description}}</p>
+                    <a href="{{value.url}}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
